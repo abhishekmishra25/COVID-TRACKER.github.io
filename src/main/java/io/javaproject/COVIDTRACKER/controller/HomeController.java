@@ -12,6 +12,7 @@ import java.util.List;
 // this is what is accesed when we call home url
 @Controller
 public class HomeController {
+    // we gona Autowire
     @Autowired
     CoronaVirusDataServices coronaVirusService;
 // all of this class method retun rest responses in the term of JSON
@@ -25,7 +26,7 @@ public class HomeController {
         // you have cahnce to modify the data in here
         //---------------------------------------------------
 
-        // we gona Autowire
+
         List<LocationStats> allStats = coronaVirusService.getAllStats();
         int totalReportedCases = allStats.stream().mapToInt(stat -> stat.getLatestTotalCase()).sum();
         int totalNewCases = allStats.stream().mapToInt(stat -> stat.getDiffFromPrevDay()).sum();

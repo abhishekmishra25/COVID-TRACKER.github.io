@@ -1,5 +1,4 @@
 package io.javaproject.COVIDTRACKER.controller;
-
 import io.javaproject.COVIDTRACKER.models.LocationStats;
 import io.javaproject.COVIDTRACKER.services.CoronaVirusDataServices;
 import org.springframework.beans.factory.annotation.Autowired;
